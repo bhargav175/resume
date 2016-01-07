@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import Appbar from '../../components/Appbar';
+import HeaderStrip from '../../components/HeaderStrip';
 
 
 require('./style.scss');
@@ -15,6 +17,8 @@ class App extends React.Component{
 	
 	render(){
 		return <div className="app">
+				<HeaderStrip/>
+				<Appbar path={this.props.routing.path}/>
 				{this.props.children}
 			</div>;
 	}
